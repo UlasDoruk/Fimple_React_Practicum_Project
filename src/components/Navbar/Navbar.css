@@ -1,0 +1,12 @@
+img.d-inline-block.align-top {
+    margin-left: 30px;
+}
+
+p.Navbar-text {
+    margin: 7px;
+    font-family: monospace;
+}
+
+a.navbar-brand {
+    display: flex;
+}
