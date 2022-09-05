@@ -3,10 +3,22 @@ img.d-inline-block.align-top {
 }
 
 p.Navbar-text {
-    margin: 7px;
+    margin-left: 15px;
     font-family: monospace;
 }
 
 a.navbar-brand {
     display: flex;
+}
+
+@media screen and (max-width : 400px) {
+    p.Navbar-text{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width : 401px) {
+    p.Navbar-text {
+        font-size: 20px;
+    }
 }
