@@ -5,6 +5,7 @@ img.d-inline-block.align-top {
 p.Navbar-text {
     margin-left: 15px;
     font-family: monospace;
+    color: azure;
 }
 
 a.navbar-brand {

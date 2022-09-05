@@ -23,3 +23,18 @@ button.btn.btn-info {
 .container {
     min-height: 86vh;
 }
+
+p.homepage-text {
+    margin-inline-end: auto;
+    font-family: cursive;
+}
+
+.card {
+    padding: 10%;
+    margin-top: 30px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    margin-bottom: 20px;
+}

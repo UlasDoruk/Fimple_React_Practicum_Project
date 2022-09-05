@@ -6,4 +6,7 @@ svg.bi.bi-github {
 .text-center.p-3 {
     color: white;
     background-color: darkkhaki;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
