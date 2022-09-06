@@ -1,25 +1,3 @@
-button.btn.btn-warning {
-    margin: 1%;
-    width: 100px;
-    height: 50px;
-    font-family: monospace;
-}
-
-button.btn.btn-danger {
-    margin: 1%;
-    width: 100px;
-    height: 50px;
-    font-family: monospace;
-    color: black;
-}
-
-button.btn.btn-info {
-    margin: 1%;
-    width: 100px;
-    height: 50px;
-    font-family: monospace;
-}
-
 .container {
     min-height: 86vh;
 }
