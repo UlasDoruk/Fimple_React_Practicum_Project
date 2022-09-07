@@ -4,7 +4,7 @@ function ResetButton() {
   return (
     <div className="resetbtn">
       <NavLink to={"/"}>
-        <button className="btn btn-success">Reset</button>
+        <button className="btn btn-success">RESET</button>
       </NavLink>
     </div>
   );
