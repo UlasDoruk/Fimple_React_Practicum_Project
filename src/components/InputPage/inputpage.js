@@ -21,15 +21,15 @@ function InputPage() {
   }
 
   function Profit(e) {
-    setProfit(e.target.value);
+    setProfit((e.target.value)/100);
   }
 
   function KKDF(e) {
-    setKkdf(e.target.value);
+    setKkdf((e.target.value)/100);
   }
 
   function BSMV(e) {
-    setBsmv(e.target.value);
+    setBsmv((e.target.value)/100);
   }
  
 
