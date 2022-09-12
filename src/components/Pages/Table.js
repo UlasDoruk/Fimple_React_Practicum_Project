@@ -4,50 +4,55 @@ import React, { useContext } from "react";
 import InputContext from "../Context/InputContext"
 
 function Table() {
-
   const { credit } = useContext(InputContext);
   const { profit } = useContext(InputContext);
   const { installment } = useContext(InputContext);
   const { kkdf } = useContext(InputContext);
   const { bsmv } = useContext(InputContext);
+  
+  let newinstallment = parseInt(installment);
+  let remain = credit;
 
-  let  newinstallment = parseInt(installment)
-  const newarr = []
-  Array(newinstallment).fill(0).forEach((x,i)=>{
-    newarr.push(i+1)
-  })
+  const newarr = [];
+  Array(newinstallment)
+    .fill(0)
+    .forEach((x, i) => {
+      newarr.push(i + 1);
+    });
 
-  const newprofit = parseFloat(credit * profit).toFixed(2);
-  const newkkdf = parseFloat(credit * kkdf).toFixed(2);
-  const newbsmv = parseFloat(credit * bsmv).toFixed(2);
   const price = (
     (credit *
       (profit + kkdf + bsmv) *
       Math.pow(profit + kkdf + bsmv + 1, installment)) /
     (Math.pow(profit + kkdf + bsmv + 1, installment) - 1)
   ).toFixed(2);
-  const main = parseFloat(price - newprofit - newbsmv - newkkdf).toFixed(2);
-  const remain = (credit-main).toFixed(2)
 
-  const renderTable = ()=>{
-   return(
-    <React.Fragment>
-      {newarr.map((num,index)=>{
-        return (
-          <tr>
-            <th scope="row">{num}</th>
-            <td>{price}</td>
-            <td>{main}</td>
-            <td>{remain}</td>
-            <td>{newprofit}</td>
-            <td>{newkkdf}</td>
-            <td>{newbsmv}</td>
-          </tr>
-        );
-      })}
-    </React.Fragment>
-   )
-  }
+  const renderTable = () => {
+    return (
+      <React.Fragment>
+        {newarr.map((num, index) => {
+          const newprofit = parseFloat(remain * profit).toFixed(2);
+          const newbsmv = parseFloat(remain * bsmv).toFixed(2);
+          const newkkdf = parseFloat(remain * kkdf).toFixed(2);
+          const main = parseFloat(
+            price - newprofit - newbsmv - newkkdf
+          ).toFixed(2);
+          remain = parseFloat(remain-main).toFixed(2)
+          return (
+            <tr key={index}>
+              <th scope="row">{num}</th>
+              <td>{price}</td>
+              <td>{main}</td>
+              <td>{remain}</td>
+              <td>{newprofit}</td>
+              <td>{newkkdf}</td>
+              <td>{newbsmv}</td>
+            </tr>
+          );
+        })}
+      </React.Fragment>
+    );
+  };
 
   return (
     <div className="container">
@@ -63,11 +68,9 @@ function Table() {
             <th scope="col">BSMV</th>
           </tr>
         </thead>
-        <tbody>
-          {renderTable()}
-        </tbody>
+        <tbody>{renderTable()}</tbody>
       </table>
-      <ResetButton />
+      <ResetButton/>
     </div>
   );
 }

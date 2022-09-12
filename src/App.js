@@ -3,8 +3,8 @@ import HomePage  from './components/Pages/homepage';
 import Table from "./components/Pages/Table";
 import {Routes,Route} from "react-router-dom"
 import {InputProvider} from "./components/Context/InputContext"
-
 function App() {
+
   return (
     <div className="App">
         <InputProvider>

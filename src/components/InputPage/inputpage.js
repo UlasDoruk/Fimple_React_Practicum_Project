@@ -62,9 +62,10 @@ function InputPage() {
           type="number"
           onChange={KKDF}
         ></input>
-        <NavLink to={"/Table"}>
+        {(credit&&installment&&profit&&kkdf&&bsmv) ? <NavLink to={"/Table"}>
           <button className="btn btn-success">Show The Payment Table</button>
-        </NavLink>
+        </NavLink> : ""}
+        
       </div>
     </div>
   );
