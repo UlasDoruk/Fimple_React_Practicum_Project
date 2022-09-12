@@ -2,6 +2,7 @@ import "./Table.css"
 import ResetButton from "../Buttons/ResetButton";
 import React, { useContext } from "react";
 import InputContext from "../Context/InputContext"
+import TotalButton from "../Buttons/TotalButton";
 
 function Table() {
   const { credit } = useContext(InputContext);
@@ -9,35 +10,39 @@ function Table() {
   const { installment } = useContext(InputContext);
   const { kkdf } = useContext(InputContext);
   const { bsmv } = useContext(InputContext);
-  
+  const {flag} = useContext(InputContext)
+
   let newinstallment = parseInt(installment);
   let remain = credit;
 
   const newarr = [];
-  Array(newinstallment)
+  Array(newinstallment ? newinstallment : 1)
     .fill(0)
     .forEach((x, i) => {
       newarr.push(i + 1);
     });
 
   const price = (
-    (credit *
-      (profit + kkdf + bsmv) *
-      Math.pow(profit + kkdf + bsmv + 1, installment)) /
-    (Math.pow(profit + kkdf + bsmv + 1, installment) - 1)
-  ).toFixed(2);
+        (credit *
+          (profit + kkdf + bsmv) *
+          Math.pow(profit + kkdf + bsmv + 1, installment)) /
+        (Math.pow(profit + kkdf + bsmv + 1, installment) - 1)
+      ).toFixed(2)
+
+  // const simple = parseFloat(remain * profit * (30 / 30)).toFixed(2);
+  // const compound = parseFloat(remain*(Math.pow(1+profit),(30/30))-remain).toFixed(2);
 
   const renderTable = () => {
     return (
       <React.Fragment>
         {newarr.map((num, index) => {
-          const newprofit = parseFloat(remain * profit).toFixed(2);
+          const newprofit = parseFloat(remain * profit * (30 / 30)).toFixed(2);
           const newbsmv = parseFloat(remain * bsmv).toFixed(2);
           const newkkdf = parseFloat(remain * kkdf).toFixed(2);
           const main = parseFloat(
             price - newprofit - newbsmv - newkkdf
           ).toFixed(2);
-          remain = parseFloat(remain-main).toFixed(2)
+          remain = parseFloat(remain - main).toFixed(2);
           return (
             <tr key={index}>
               <th scope="row">{num}</th>
@@ -56,6 +61,7 @@ function Table() {
 
   return (
     <div className="container">
+      <h1>Repayment Plan</h1>
       <table className="table table-dark">
         <thead>
           <tr>
@@ -70,7 +76,9 @@ function Table() {
         </thead>
         <tbody>{renderTable()}</tbody>
       </table>
-      <ResetButton/>
+      {(flag === true ? "" : "")}
+      <TotalButton/>
+      <ResetButton />
     </div>
   );
 }

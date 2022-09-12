@@ -65,7 +65,6 @@ function InputPage() {
         {(credit&&installment&&profit&&kkdf&&bsmv) ? <NavLink to={"/Table"}>
           <button className="btn btn-success">Show The Payment Table</button>
         </NavLink> : ""}
-        
       </div>
     </div>
   );
