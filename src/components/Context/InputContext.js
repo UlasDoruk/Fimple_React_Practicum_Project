@@ -11,10 +11,12 @@ export const InputProvider = ({ children }) => {
   const [bsmv, setBsmv] = useState("");
   const [flag,setFlag] = useState(false)
 
-  function showCard(){
-    setFlag(true)
-  }
-
+  const price = (parseFloat((credit *
+      (profit + kkdf + bsmv) *
+      Math.pow(profit + kkdf + bsmv + 1, installment)) /
+    (Math.pow(profit + kkdf + bsmv + 1, installment) - 1)
+  ).toFixed(2))
+    
   const handleReset = ()=>{
     setCredit("");
     setProfit("");
@@ -24,7 +26,7 @@ export const InputProvider = ({ children }) => {
 
   const values = {
     credit,setCredit,installment,setInstallment,profit,setProfit,kkdf,setKkdf,
-    bsmv,setBsmv,handleReset,showCard,flag
+    bsmv,setBsmv,handleReset,flag,setFlag,price
   };
 
   return (

@@ -7,7 +7,7 @@ p.homepage-text {
     font-family: cursive;
 }
 
-.card {
+.card.input {
     padding: 10%;
     margin-top: 30px;
 }

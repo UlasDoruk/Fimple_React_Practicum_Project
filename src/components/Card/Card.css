@@ -1,0 +1,6 @@
+p.cardtext {
+    border: solid lightgrey;
+    padding: -10px;
+    margin: 6px;
+    border-style: radi;
+}

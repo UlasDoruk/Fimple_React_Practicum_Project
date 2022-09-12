@@ -1,17 +1,20 @@
 import "./Table.css"
 import ResetButton from "../Buttons/ResetButton";
+import Card from "../Card/Card"
 import React, { useContext } from "react";
 import InputContext from "../Context/InputContext"
 import TotalButton from "../Buttons/TotalButton";
 
 function Table() {
+
   const { credit } = useContext(InputContext);
   const { profit } = useContext(InputContext);
   const { installment } = useContext(InputContext);
   const { kkdf } = useContext(InputContext);
   const { bsmv } = useContext(InputContext);
-  const {flag} = useContext(InputContext)
-
+  const {price} = useContext(InputContext)
+  const { flag } = useContext(InputContext);
+  
   let newinstallment = parseInt(installment);
   let remain = credit;
 
@@ -21,13 +24,6 @@ function Table() {
     .forEach((x, i) => {
       newarr.push(i + 1);
     });
-
-  const price = (
-        (credit *
-          (profit + kkdf + bsmv) *
-          Math.pow(profit + kkdf + bsmv + 1, installment)) /
-        (Math.pow(profit + kkdf + bsmv + 1, installment) - 1)
-      ).toFixed(2)
 
   // const simple = parseFloat(remain * profit * (30 / 30)).toFixed(2);
   // const compound = parseFloat(remain*(Math.pow(1+profit),(30/30))-remain).toFixed(2);
@@ -76,7 +72,7 @@ function Table() {
         </thead>
         <tbody>{renderTable()}</tbody>
       </table>
-      {(flag === true ? "" : "")}
+      {(flag === true ? <Card/> : "")}
       <TotalButton/>
       <ResetButton />
     </div>

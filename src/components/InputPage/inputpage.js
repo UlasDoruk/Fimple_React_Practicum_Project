@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
 import Buttons from "../Buttons/Buttons"
 import "./Inputpage.css"
 import InputContext from "../Context/InputContext";
 import { useContext} from "react";
+import Paymentbtn from "../Buttons/Paymentbtn";
 
 function InputPage() {
 
@@ -35,7 +35,7 @@ function InputPage() {
 
   return (
     <div className="container">
-      <div className="card">
+      <div className="card input">
         <Buttons />
         <input
           placeholder="Credit Amount"
@@ -62,9 +62,7 @@ function InputPage() {
           type="number"
           onChange={KKDF}
         ></input>
-        {(credit&&installment&&profit&&kkdf&&bsmv) ? <NavLink to={"/Table"}>
-          <button className="btn btn-success">Show The Payment Table</button>
-        </NavLink> : ""}
+        {(credit&&installment&&profit&&kkdf&&bsmv) ? <Paymentbtn/> : ""}
       </div>
     </div>
   );
