@@ -16,3 +16,8 @@ td{
   text-overflow: ellipsis;
   border: 1px solid;
 }
+
+.tablebtn {
+    margin: 20px;
+    display: inline-flex;
+}

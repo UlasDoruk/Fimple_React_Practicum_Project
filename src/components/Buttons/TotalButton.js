@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import InputContext from '../Context/InputContext'
+import "./TotalButton.css"
 
 function TotalButton() {
     
@@ -7,7 +8,7 @@ function TotalButton() {
 
   return (
     <div>
-        <button className='btn btn-warning' onClick={()=>setFlag(flag === true ? false : true)}>Show Total Payments</button>
+        <button className='btn btn-primary' onClick={()=>setFlag(flag === true ? false : true)}>SHOW TOTAL PAYMENTS</button>
     </div>
   )
 }

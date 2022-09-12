@@ -72,9 +72,11 @@ function Table() {
         </thead>
         <tbody>{renderTable()}</tbody>
       </table>
-      {(flag === true ? <Card/> : "")}
-      <TotalButton/>
-      <ResetButton />
+      {flag === true ? <Card /> : ""}
+      <div className="tablebtn">
+        <TotalButton />
+        <ResetButton />
+      </div>
     </div>
   );
 }
