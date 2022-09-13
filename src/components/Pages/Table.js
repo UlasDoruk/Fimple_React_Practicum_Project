@@ -18,6 +18,8 @@ function Table() {
   const { weekly } = useContext(ContainerContext);
   const { monthly} = useContext(ContainerContext);
   const { annual } = useContext(ContainerContext);
+  const {basic} = useContext(ContainerContext)
+  const {compound} = useContext(ContainerContext)
 
   
   let newinstallment = parseInt(installment);
@@ -78,9 +80,6 @@ function Table() {
         <tbody>{renderTable()}</tbody>
       </table>
       {flag === true ? <Card /> : ""}
-      {weekly === true ? console.log("weekly") : console.log("yazmadı")}
-      {monthly === true ? console.log("monthly") : console.log("yazmadı")}
-      {annual === true ? console.log("annual") : console.log("yazmadı")}
       <div className="tablebtn">
         <TotalButton />
         <ResetButton />
