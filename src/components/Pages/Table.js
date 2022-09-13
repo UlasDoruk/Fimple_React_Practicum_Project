@@ -15,13 +15,8 @@ function Table() {
   const { bsmv } = useContext(InputContext);
   const {price} = useContext(InputContext)
   const { flag } = useContext(ContainerContext);
-  const { weekly } = useContext(ContainerContext);
-  const { monthly} = useContext(ContainerContext);
-  const { annual } = useContext(ContainerContext);
-  const {basic} = useContext(ContainerContext)
   const {compound} = useContext(ContainerContext)
 
-  
   let newinstallment = parseInt(installment);
   let remain = credit;
 
@@ -32,14 +27,11 @@ function Table() {
       newarr.push(i + 1);
     });
 
-  // const simple = parseFloat(remain * profit * (30 / 30)).toFixed(2);
-  // const compound = parseFloat(remain*(Math.pow(1+profit),(30/30))-remain).toFixed(2);
-
   const renderTable = () => {
     return (
       <React.Fragment>
         {newarr.map((num, index) => {
-          const newprofit = parseFloat(remain * profit * (30 / 30)).toFixed(2);
+          const newprofit = (compound === true ? parseFloat(remain * profit * (30 / 30)).toFixed(2): parseFloat(remain * (Math.pow((1+profit),30/30)) - remain).toFixed(2))
           const newbsmv = parseFloat(remain * bsmv).toFixed(2);
           const newkkdf = parseFloat(remain * kkdf).toFixed(2);
           const main = parseFloat(

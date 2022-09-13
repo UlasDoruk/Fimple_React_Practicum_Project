@@ -4,15 +4,12 @@ import { useContext } from "react";
 
 function InterestButton() {
 
-    const  {basic, setBasic} = useContext(ContainerContext);
     const  {compound, setCompound} = useContext(ContainerContext);
 
   return (
     <div className="ınterestbtn">
       <button
-        className="btn btn-dark"
-        onClick={() => setBasic(basic === true ? false : true)}
-      >
+        className="btn btn-dark">
         Simple Interest
       </button>
       <button

@@ -8,11 +8,19 @@ export const ContainerProvider = ({ children }) => {
   const [weekly,setWeekly] = useState(false);
   const [monthly,setMonthly] = useState(false);
   const [annual,setAnnual] = useState(false);
-  const [basic,setBasic] = useState(false)
   const [compound,setCompound] = useState(false)
 
+  const ContaineReset = () => {
+    setFlag(false)
+    setWeekly(false);
+    setMonthly(false);
+    setAnnual(false);
+    setCompound(false);
+  };
+
+
   const values = {
-    flag,setFlag,weekly,setWeekly,monthly,setMonthly,annual,setAnnual,basic,setBasic,compound,setCompound
+    flag,setFlag,weekly,setWeekly,monthly,setMonthly,annual,setAnnual,compound,setCompound,ContaineReset
   };
 
   return (
