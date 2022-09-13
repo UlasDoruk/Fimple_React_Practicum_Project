@@ -3,6 +3,7 @@ import "./Inputpage.css"
 import InputContext from "../Context/InputContext";
 import { useContext} from "react";
 import Paymentbtn from "../Buttons/Paymentbtn";
+import InterestButton from "../Buttons/InterestButton";
 
 function InputPage() {
 
@@ -37,6 +38,7 @@ function InputPage() {
     <div className="container">
       <div className="card input">
         <Buttons />
+        <InterestButton/>
         <input
           placeholder="Credit Amount"
           type="number"

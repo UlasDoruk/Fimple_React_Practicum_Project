@@ -3,6 +3,7 @@ import ResetButton from "../Buttons/ResetButton";
 import Card from "../Card/Card"
 import React, { useContext } from "react";
 import InputContext from "../Context/InputContext"
+import ContainerContext from "../Context/ContainerContext";
 import TotalButton from "../Buttons/TotalButton";
 
 function Table() {
@@ -13,7 +14,11 @@ function Table() {
   const { kkdf } = useContext(InputContext);
   const { bsmv } = useContext(InputContext);
   const {price} = useContext(InputContext)
-  const { flag } = useContext(InputContext);
+  const { flag } = useContext(ContainerContext);
+  const { weekly } = useContext(ContainerContext);
+  const { monthly} = useContext(ContainerContext);
+  const { annual } = useContext(ContainerContext);
+
   
   let newinstallment = parseInt(installment);
   let remain = credit;
@@ -73,6 +78,9 @@ function Table() {
         <tbody>{renderTable()}</tbody>
       </table>
       {flag === true ? <Card /> : ""}
+      {weekly === true ? console.log("weekly") : console.log("yazmadı")}
+      {monthly === true ? console.log("monthly") : console.log("yazmadı")}
+      {annual === true ? console.log("annual") : console.log("yazmadı")}
       <div className="tablebtn">
         <TotalButton />
         <ResetButton />

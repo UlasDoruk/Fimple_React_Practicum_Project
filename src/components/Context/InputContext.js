@@ -9,7 +9,6 @@ export const InputProvider = ({ children }) => {
   const [profit, setProfit] = useState("");
   const [kkdf, setKkdf] = useState("");
   const [bsmv, setBsmv] = useState("");
-  const [flag,setFlag] = useState(false)
 
   const price = (parseFloat((credit *
       (profit + kkdf + bsmv) *
@@ -26,7 +25,7 @@ export const InputProvider = ({ children }) => {
 
   const values = {
     credit,setCredit,installment,setInstallment,profit,setProfit,kkdf,setKkdf,
-    bsmv,setBsmv,handleReset,flag,setFlag,price
+    bsmv,setBsmv,handleReset,price
   };
 
   return (

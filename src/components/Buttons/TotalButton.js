@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import InputContext from '../Context/InputContext'
+import ContainerContext from '../Context/ContainerContext'
 import "./TotalButton.css"
 
 function TotalButton() {
     
-    const {flag,setFlag} = useContext(InputContext)
+    const {flag,setFlag} = useContext(ContainerContext)
 
   return (
     <div>
