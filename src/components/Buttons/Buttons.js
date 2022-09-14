@@ -6,26 +6,39 @@ function Buttons() {
 
   const { weekly, setWeekly, monthly, setMonthly, annual, setAnnual} = useContext(ContainerContext);
 
-  
+  const ReverseWeek = () => {
+    setMonthly(false)
+    setAnnual(false)
+  };
+
+   const ReverseMonth = () => {
+     setWeekly(false);
+     setAnnual(false);
+   };
+
+    const ReverseAnnual = () => {
+      setMonthly(false);
+      setWeekly(false);
+    };
 
   return (
     <div className=" buttons">
       <h4 className="homepage-text">PLEASE CHOOSE YOUR PAYMENT METHOD</h4>
       <button
         className="btn btn-danger"
-        onClick={() => (setWeekly(weekly === true ? false : true))}
+        onClick={() => (ReverseWeek(),setWeekly(weekly === true ? false : true))}
       >
         WEEKLY
       </button>
       <button
         className="btn btn-danger"
-        onClick={() => (setMonthly(monthly === true ? false : true))}
+        onClick={() => (ReverseMonth(),setMonthly(monthly === true ? false : true))}
       >
         MONTHLY
       </button>
       <button
         className="btn btn-danger"
-        onClick={() => ( setAnnual(annual === true ? false : true))}
+        onClick={() => ( ReverseAnnual(),setAnnual(annual === true ? false : true))}
       >
         ANNUAL
       </button>
