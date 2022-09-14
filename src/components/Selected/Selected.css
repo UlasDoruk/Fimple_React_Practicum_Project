@@ -1,0 +1,25 @@
+
+
+@media screen and (min-width: 421px) {
+  .card.selected {
+    align-items: center;
+    border-radius: 30px;
+    font-family: 'Circular-Loom';
+    margin-bottom: 20px;
+    background: aliceblue;
+}
+h3.selected.text {
+    color: lightslategrey;
+}
+}
+@media screen and (max-width: 420px) {
+ .card.selected {
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: aliceblue;
+}
+h3.selected.text {
+    color: lightslategrey;
+    font-size: 15px;
+}}

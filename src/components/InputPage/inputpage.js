@@ -1,13 +1,17 @@
 import Buttons from "../Buttons/Buttons"
 import "./Inputpage.css"
+import ContainerContext from "../Context/ContainerContext";
 import InputContext from "../Context/InputContext";
 import { useContext} from "react";
 import Paymentbtn from "../Buttons/Paymentbtn";
 import InterestButton from "../Buttons/InterestButton";
+import Selected from "../Selected/Selected";
+
 
 function InputPage() {
 
   const { credit,setCredit,installment,setInstallment,profit,setProfit,kkdf,setKkdf,bsmv,setBsmv,} = useContext(InputContext);
+  const {weekly,monthly,annual,simple,compound} = useContext(ContainerContext)
 
   function Credit(e) {
     setCredit(e.target.value);
@@ -34,6 +38,7 @@ function InputPage() {
       <div className="card input">
         <Buttons />
         <InterestButton />
+        {(weekly || annual || monthly || simple || compound) ? <Selected/> : "" }
         <input
           placeholder="Credit Amount"
           type="number"
