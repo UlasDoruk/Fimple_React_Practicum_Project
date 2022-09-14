@@ -21,6 +21,7 @@ export const InputProvider = ({ children }) => {
     setProfit("");
     setKkdf("");
     setBsmv("");
+    setInstallment("")
   }
 
   const values = {

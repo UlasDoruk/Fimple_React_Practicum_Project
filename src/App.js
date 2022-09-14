@@ -4,19 +4,22 @@ import Table from "./components/Pages/Table";
 import {Routes,Route} from "react-router-dom"
 import {InputProvider} from "./components/Context/InputContext"
 import {ContainerProvider} from "./components/Context/ContainerContext"
+import { FormulaProvider } from './components/Context/FormulaContext';
 
 function App() {
 
   return (
     <div className="App">
-      <ContainerProvider>
-        <InputProvider>
-          <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/Table" element={<Table />}></Route>
-          </Routes>
-        </InputProvider>
-      </ContainerProvider>
+      <InputProvider>
+        <ContainerProvider>
+          <FormulaProvider>
+            <Routes>
+              <Route path="/" element={<HomePage />}></Route>
+              <Route path="/Table" element={<Table />}></Route>
+            </Routes>
+          </FormulaProvider>
+        </ContainerProvider>
+      </InputProvider>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function ResetButton() {
 
   return (
     <div className="resetbtn">
-      <NavLink to={"/"} onClick={(handleReset,ContaineReset)}>
+      <NavLink to={"/"} onClick={()=>(handleReset(),ContaineReset())}>
         <button className="btn btn-success">RESET</button>
       </NavLink>
     </div>
