@@ -13,7 +13,7 @@ function Navbar() {
             className="d-inline-block align-top"
             alt=""
           ></img>
-          <p className="Navbar-text">Fimple React Practicum</p>
+          <h3 className="Navbar-text">Fimple React Practicum</h3>
         </NavLink>
       </nav>
     </div>

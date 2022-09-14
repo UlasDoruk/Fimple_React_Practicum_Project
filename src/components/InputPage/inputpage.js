@@ -7,11 +7,7 @@ import InterestButton from "../Buttons/InterestButton";
 
 function InputPage() {
 
-  const { credit, setCredit } = useContext(InputContext);
-  const { installment, setInstallment } = useContext(InputContext);
-  const { profit, setProfit } = useContext(InputContext);
-  const { kkdf, setKkdf } = useContext(InputContext);
-  const { bsmv, setBsmv } = useContext(InputContext);
+  const { credit,setCredit,installment,setInstallment,profit,setProfit,kkdf,setKkdf,bsmv,setBsmv,} = useContext(InputContext);
 
   function Credit(e) {
     setCredit(e.target.value);

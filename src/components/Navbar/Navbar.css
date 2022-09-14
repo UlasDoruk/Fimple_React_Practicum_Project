@@ -2,7 +2,7 @@ img.d-inline-block.align-top {
     margin-left: 30px;
 }
 
-p.Navbar-text {
+h3.Navbar-text {
     margin-left: 15px;
     font-family: monospace;
     color: azure;
@@ -13,13 +13,10 @@ a.navbar-brand {
 }
 
 @media screen and (max-width : 400px) {
-    p.Navbar-text{
+    h3.Navbar-text{
         font-size: 10px;
     }
-}
-
-@media screen and (min-width : 401px) {
-    p.Navbar-text {
-        font-size: 20px;
-    }
-}
+    img.d-inline-block.align-top {
+   height: 40px;
+   width: 40px;
+}}

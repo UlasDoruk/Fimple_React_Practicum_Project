@@ -9,14 +9,9 @@ import TotalButton from "../Buttons/TotalButton";
 
 function Table() {
 
-  const { credit } = useContext(InputContext);
-  const {profit} = useContext(InputContext)
-  const { installment } = useContext(InputContext);
-  const { kkdf } = useContext(InputContext);
-  const { bsmv } = useContext(InputContext);
-  const {price} = useContext(InputContext)
+  const { credit,profit,installment,kkdf,bsmv,price } = useContext(InputContext);
   const { flag } = useContext(ContainerContext);
-  const {CalcuFormula} = useContext(FormulaContext)
+  const {CalculationToFormula} = useContext(FormulaContext)
 
   let newinstallment = parseInt(installment);
   let remain = credit;
@@ -32,7 +27,7 @@ function Table() {
     return (
       <React.Fragment>
         {newarr.map((num, index) => {
-          const newprofit = CalcuFormula(remain,profit)
+          const newprofit = CalculationToFormula(remain,profit)
           const newbsmv = parseFloat(remain * bsmv).toFixed(2);
           const newkkdf = parseFloat(remain * kkdf).toFixed(2);
           const main = parseFloat(price - newprofit - newbsmv - newkkdf).toFixed(2);

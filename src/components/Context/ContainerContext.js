@@ -4,11 +4,11 @@ const ContainerContext = createContext();
 
 export const ContainerProvider = ({ children }) => {
 
-  const [formula, setFormula] = useState(0);
   const [flag, setFlag] = useState(false);
   const [weekly,setWeekly] = useState(false);
   const [monthly,setMonthly] = useState(false);
   const [annual,setAnnual] = useState(false);
+  const [simple,setSimple] = useState(false)
   const [compound,setCompound] = useState(false)
 
   const ContaineReset = () => {
@@ -16,11 +16,12 @@ export const ContainerProvider = ({ children }) => {
     setWeekly(false);
     setMonthly(false);
     setAnnual(false);
+    setSimple(false)
     setCompound(false);
   };
 
   const values = {
-    flag,setFlag,weekly,setWeekly,monthly,setMonthly,annual,setAnnual,compound,setCompound,ContaineReset,formula,setFormula
+    flag,setFlag,weekly,setWeekly,monthly,setMonthly,annual,setAnnual,compound,setCompound,ContaineReset,simple,setSimple
   };
 
   return (

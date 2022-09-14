@@ -1,3 +1,8 @@
+button.btn.btn-danger:focus {
+  background-color:red;
+  color:rgb(247, 242, 241);
+} 
+
 @media screen and (min-width: 1101px) {
   .buttons {
     padding-bottom: 50px;

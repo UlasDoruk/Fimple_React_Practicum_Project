@@ -4,9 +4,7 @@ import InputContext from "../Context/InputContext";
 
 function Card() {
 
-    const {installment} = useContext(InputContext)
-    const {price} = useContext(InputContext)
-
+    const {installment,price} = useContext(InputContext)
     const totalInstallment = parseFloat(installment * price).toFixed(2)
 
   return (

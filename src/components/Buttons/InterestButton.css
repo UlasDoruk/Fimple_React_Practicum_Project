@@ -3,11 +3,10 @@
     margin-top: -40px;
 }
 
-/* button.btn.btn-dark{
-    margin: 10px;
-    height: 40px;
-    width: 200px;
-} */
+button.btn.btn-dark:focus {
+  background-color:black;
+  border-color: beige;
+}
 
 @media screen and (min-width: 1101px) {
     .ınterestbtn {

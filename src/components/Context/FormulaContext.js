@@ -6,12 +6,9 @@ const FormulaContext = createContext();
 export const FormulaProvider = ({ children }) => {
 
     const [formula,setFormula] = useState(0)
+    const {weekly,annual,compound} = useContext(ContainerContext)
 
-    const {weekly} = useContext(ContainerContext)
-    const { annual } = useContext(ContainerContext);
-    const {compound} = useContext(ContainerContext)
-
-    const CalcuFormula =(remain,profit)=>{
+    const CalculationToFormula =(remain,profit)=>{
        if (compound === true) {
         if (weekly === true) {
           return parseFloat(remain * (Math.pow((1 +profit),( 0,23)))-remain).toFixed(2);
@@ -30,11 +27,8 @@ export const FormulaProvider = ({ children }) => {
         }
       }
     }
-     
-      
-    
 
-  const values = {formula,setFormula,CalcuFormula};
+  const values = {formula,setFormula,CalculationToFormula};
 
   return (
     <FormulaContext.Provider value={values}>{children}</FormulaContext.Provider>

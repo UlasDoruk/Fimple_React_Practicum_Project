@@ -4,28 +4,28 @@ import "./Buttons.css"
 
 function Buttons() {
 
-  const {weekly,setWeekly} = useContext(ContainerContext);
-  const {monthly,setMonthly} = useContext(ContainerContext);
-  const {annual,setAnnual} = useContext(ContainerContext);
+  const { weekly, setWeekly, monthly, setMonthly, annual, setAnnual} = useContext(ContainerContext);
+
+  
 
   return (
     <div className=" buttons">
-      <p className="homepage-text">PLEASE CHOOSE YOUR PAYMENT METHOD</p>
+      <h4 className="homepage-text">PLEASE CHOOSE YOUR PAYMENT METHOD</h4>
       <button
-        className="btn btn-danger weekly"
-        onClick={() => setWeekly(weekly === true ? false : true)}
+        className="btn btn-danger"
+        onClick={() => (setWeekly(weekly === true ? false : true))}
       >
         WEEKLY
       </button>
       <button
-        className="btn btn-danger monthly"
-        onClick={() => setMonthly(monthly === true ? false : true)}
+        className="btn btn-danger"
+        onClick={() => (setMonthly(monthly === true ? false : true))}
       >
         MONTHLY
       </button>
       <button
-        className="btn btn-danger annual"
-        onClick={() => setAnnual(annual === true ? false : true)}
+        className="btn btn-danger"
+        onClick={() => ( setAnnual(annual === true ? false : true))}
       >
         ANNUAL
       </button>
@@ -33,4 +33,4 @@ function Buttons() {
   );
 }
 
-export default Buttons
+export default Buttons;
