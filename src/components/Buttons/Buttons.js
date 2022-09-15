@@ -6,6 +6,8 @@ function Buttons() {
 
   const { weekly, setWeekly, monthly, setMonthly, annual, setAnnual} = useContext(ContainerContext);
 
+  // Haftalık, aylık ya da yıllık butonlarına tıklandığında diğer butonların false değerini almasını sağlayan functionlar
+
   const ReverseWeek = () => {
     setMonthly(false)
     setAnnual(false)

@@ -5,6 +5,7 @@ import InputContext from "../Context/InputContext";
 
 function ResetButton() {
 
+  // Bu iki fonksiyon reset tuşuna bastığımızda statelerin içini sıfırlamaya yarıyor
   const {handleReset} = useContext(InputContext)
   const {ContaineReset} = useContext(ContainerContext)
 

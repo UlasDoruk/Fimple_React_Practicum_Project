@@ -4,7 +4,8 @@ import "./TotalButton.css"
 
 function TotalButton() {
     
-    const {flag,setFlag} = useContext(ContainerContext)
+  // flag state'i tablonun altındaki toplan ödenecek miktarı gösteren kartın tetikleyicisi konumunda 
+  const {flag,setFlag} = useContext(ContainerContext)
 
   return (
     <div>

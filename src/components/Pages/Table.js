@@ -12,10 +12,11 @@ function Table() {
   const { credit,profit,installment,kkdf,bsmv,price } = useContext(InputContext);
   const { flag } = useContext(ContainerContext);
   const {CalculationToFormula} = useContext(FormulaContext)
-
+  // Taksit sayısını float'a çeviren değer
   let newinstallment = parseInt(installment);
+  // ilk remain değerini kullanıcının girdiği anapara değerine eşitliyoruz
   let remain = credit;
-
+  // Tabloda kaç adet satır olacağını belirleyen array
   const newarr = [];
   Array(newinstallment ? newinstallment : 1)
     .fill(0)
@@ -27,6 +28,7 @@ function Table() {
     return (
       <React.Fragment>
         {newarr.map((num, index) => {
+          // newarr listesini map ile elemanlarına erişerek istenilen sütünların verilerini oluşturuyoruz
           const newprofit = CalculationToFormula(remain,profit)
           const newbsmv = parseFloat(remain * bsmv).toFixed(2);
           const newkkdf = parseFloat(remain * kkdf).toFixed(2);
@@ -63,8 +65,10 @@ function Table() {
             <th scope="col">BSMV</th>
           </tr>
         </thead>
+        {/* Önceden oluştruduğumuz tablodaki satırlara gelicek verileri burada çağırıyoruz */}
         <tbody>{renderTable()}</tbody>
       </table>
+      {/* flag değeri true olursa Card componenti çalışacak */}
       {flag === true ? <Card /> : ""}
       <div className="tablebtn">
         <TotalButton />

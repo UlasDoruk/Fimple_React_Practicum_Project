@@ -5,6 +5,7 @@ import InputContext from "../Context/InputContext";
 function Card() {
 
     const {installment,price} = useContext(InputContext)
+    // Tablonun altındaki Toplam borcu gösteren tablonun formülü
     const totalInstallment = parseFloat(installment * price).toFixed(2)
 
   return (

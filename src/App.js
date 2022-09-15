@@ -7,7 +7,7 @@ import {ContainerProvider} from "./components/Context/ContainerContext"
 import { FormulaProvider } from './components/Context/FormulaContext';
 
 function App() {
-
+  // Context apı'lerdeki providerları fonksiyon olarak dışarı çıkardık App.js'e sarmaladık
   return (
     <div className="App">
       <InputProvider>
