@@ -3,7 +3,7 @@
 # Proje : 
 
 - İlk olarak ödeme aralığını seçiyoruz. 
-  ![ödeme aralığı](https://user-images.githubusercontent.com/82175798/190662441-47583657-0df3-4043-8625-b889b5088d7a.jpg)
+ ![ödeme aralığı](https://user-images.githubusercontent.com/82175798/190662441-47583657-0df3-4043-8625-b889b5088d7a.jpg)
 - Sonrasında ise ödeme metodunu seçiyoruz. 
   ![ödeme şekli](https://user-images.githubusercontent.com/82175798/190662489-17cf97ee-031d-44b5-9de2-02ebd6af56dd.jpg)
 - Inputlara istenilen bilgileri girdikten sonra alt kısımda tablo sayfasına yönlendiren bir buton karşımıza çıkıyor. 
