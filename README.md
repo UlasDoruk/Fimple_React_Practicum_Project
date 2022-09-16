@@ -1,5 +1,12 @@
 # Fimple React Practicum Projesi
 
+# Proje : 
+
+- İlk olarak ödeme aralığını seçiyoruz. 
+- Sonrasında ise ödeme metodunu seçiyoruz. 
+- Inputlara istenilen bilgileri girdikten sonra alt kısımda tablo sayfasına yönlendiren bir buton karşımıza çıkıyor. 
+- Tablo sayfasında ise bizi geri ödeme tablosu ve en altta toplam ödeme butonu ile ana sayfaya yönlendiren reset butonu bulunuyor. 
+
 ## Projenin ayağa kaldırılması ; 
 
 - Sağ taraftaki Code kısmına basıp ZIP seçeneği ile proje dosyalarını bilgisayarınıza indiriniz.
