@@ -2,6 +2,7 @@ import {NavLink} from "react-router-dom"
 
 function Paymentbtn() {
 
+  // Table butonuna tıkladığımızda router sayesinde tablonun olduğu sayfaya yönlendiriyor
   return (
     <div>
       <NavLink to={"/Table"}>

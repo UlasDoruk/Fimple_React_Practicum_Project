@@ -4,7 +4,7 @@ import "./TotalButton.css"
 
 function TotalButton() {
     
-  // flag state'i tablonun altındaki toplan ödenecek miktarı gösteren kartın tetikleyicisi konumunda 
+  // flag state'i tablonun altındaki toplan ödenecek miktarı ve taksit tutarını gösteren kart'ın tetikleyicisi konumunda 
   const {flag,setFlag} = useContext(ContainerContext)
 
   return (
