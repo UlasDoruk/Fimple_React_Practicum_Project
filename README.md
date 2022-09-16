@@ -9,8 +9,7 @@
 - Inputlara istenilen bilgileri girdikten sonra alt kısımda tablo sayfasına yönlendiren bir buton karşımıza çıkıyor. 
   ![ınputlar](https://user-images.githubusercontent.com/82175798/190662500-a331c8e4-41a8-4ded-b7c5-bd533cca6bbe.jpg)
 - Tablo sayfasında ise bizi geri ödeme tablosu ve en altta toplam ödeme butonu ile ana sayfaya yönlendiren reset butonu bulunuyor. 
-  ![Tablo sayfası](https://user-images.githubusercontent.com/82175798/190662520-057f8996-b2e6-4a17-ad39-25b3764aa4e6.jpg)
-
+  ![tablo sayfası](https://user-images.githubusercontent.com/82175798/190663533-d7f038e5-d915-43a8-87e8-82a359df6d66.jpg)
 
 ## Projenin ayağa kaldırılması ; 
 
